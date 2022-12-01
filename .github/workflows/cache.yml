@@ -20,6 +20,6 @@ jobs:
 
       - name: Generate Chimichanga
         if: steps.cache-chimichanga.outputs.cache-hit != 'true'
-        run: generate-chimichanga.sh
+        run: ./generate-chimichanga.sh
 
-      - run: chimichanga.sh
+      - run: ./chimichanga.sh
