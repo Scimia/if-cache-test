@@ -17,7 +17,7 @@ jobs:
         uses: actions/cache@v3
         with:
           path: chimichanga
-          key: ${{ runner.os }}-chimichanga-${{
+          key: chimichanga-${{
             hashFiles(
               'generate-chimichanga.sh',
               'src/tortilla.inc'
