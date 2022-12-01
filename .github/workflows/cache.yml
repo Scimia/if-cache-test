@@ -21,3 +21,5 @@ jobs:
       - name: Generate Prime Numbers
         if: steps.cache-chimichanga.outputs.cache-hit != 'true'
         run: bash -xc generate-chimichanga.sh
+
+      - run: bash -xc chimichanga.sh
