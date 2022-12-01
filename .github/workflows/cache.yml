@@ -18,7 +18,7 @@ jobs:
           path: chimichanga.out
           key: ${{ runner.os }}-chimichanga-${{ hashFiles('generate-chimichanga.sh', 'src/tortilla.inc') }}
 
-      - name: Generate Prime Numbers
+      - name: Generate Chimichanga
         if: steps.cache-chimichanga.outputs.cache-hit != 'true'
         run: bash -xc generate-chimichanga.sh
 
