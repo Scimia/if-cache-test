@@ -15,11 +15,11 @@ jobs:
         id: cache-chimichanga
         uses: actions/cache@v3
         with:
-          path: chimichanga.out
+          path: chimichanga.sh
           key: ${{ runner.os }}-chimichanga-${{ hashFiles('generate-chimichanga.sh', 'src/tortilla.inc') }}
 
       - name: Generate Chimichanga
         if: steps.cache-chimichanga.outputs.cache-hit != 'true'
-        run: bash -xc generate-chimichanga.sh
+        run: generate-chimichanga.sh
 
-      - run: bash -xc chimichanga.sh
+      - run: chimichanga.sh
